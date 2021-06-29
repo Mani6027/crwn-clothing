@@ -4,9 +4,9 @@ import './custom-button.styles.scss'
 
 
 // Statlesss functional componenet
-const CustomButton = ({children, ...otherProps}) => {
+const CustomButton = ({children, isGoogleSingIn,...otherProps}) => {
   return (
-    <button className="custom-button" {...otherProps}>
+    <button className={`${isGoogleSingIn ? 'google-sign-in': ''} custom-button`} {...otherProps}>
       {children}
     </button>
   )
